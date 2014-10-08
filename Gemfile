@@ -9,6 +9,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'typescript-rails', '~> 0.4.1'
 gem 'slim-rails'
 gem 'bower-rails'
+gem 'mysql2'
 
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
