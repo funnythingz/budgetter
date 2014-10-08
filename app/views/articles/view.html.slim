@@ -1,4 +1,9 @@
 h1
   | #{@article.title}
-p
-  | #{@article.content}
+
+article
+  p
+    | #{@article.content}
+
+  p
+    | layout is "#{@layout}"
