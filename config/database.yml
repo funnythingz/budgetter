@@ -4,11 +4,11 @@ default: &default
   pool: 5
   username: hoge
   password: hogehoge
-  database: dudgetter_development
+  database: budgetter_development
 
 development:
   <<: *default
-  database: dudgetter_development
+  database: budgetter_development
   host: 127.0.0.1
   port: 3306
 
