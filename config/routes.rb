@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  match '/:id', to: 'articles#view', via: 'get', constraints: {id: /[0-9]+/}
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
