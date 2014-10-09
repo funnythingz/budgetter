@@ -23,4 +23,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  username: hoge
+  password: hogehoge
+  database: budgetter_development
