@@ -25,4 +25,4 @@ production:
   <<: *default
   username: hoge
   password: hogehoge
-  database: budgetter_development
+  database: budgetter
