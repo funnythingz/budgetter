@@ -11,11 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141008135840) do
+ActiveRecord::Schema.define(version: 20141020142714) do
 
-  create_table "articles", force: true do |t|
+  create_table "entries", force: true do |t|
     t.string   "title",      limit: 255
-    t.string   "content",    limit: 255
+    t.integer  "budget",     limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "spendings", force: true do |t|
+    t.string   "name",       limit: 255
+    t.integer  "amount",     limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
