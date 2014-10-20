@@ -11,23 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141020143757) do
+ActiveRecord::Schema.define(version: 20141020145630) do
 
   create_table "entries", force: true do |t|
-    t.string   "title",       limit: 255
-    t.integer  "budget",      limit: 4
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-    t.integer  "spending_id", limit: 4
+    t.string   "title",      limit: 255
+    t.integer  "budget",     limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
-
-  add_index "entries", ["spending_id"], name: "index_entries_on_spending_id", using: :btree
 
   create_table "spendings", force: true do |t|
     t.string   "name",       limit: 255
     t.integer  "amount",     limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.integer  "entry_id",   limit: 4
   end
+
+  add_index "spendings", ["entry_id"], name: "index_spendings_on_entry_id", using: :btree
 
 end
