@@ -41,6 +41,8 @@ GEM
       debug_inspector (>= 0.0.1)
     bower-rails (0.9.0)
     builder (3.2.2)
+    by_star (2.2.1)
+      activesupport
     byebug (3.5.1)
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
@@ -187,6 +189,7 @@ PLATFORMS
 
 DEPENDENCIES
   bower-rails
+  by_star
   byebug
   capybara
   factory_girl_rails
