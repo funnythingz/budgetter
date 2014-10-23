@@ -10,11 +10,9 @@ nav.navbar.navbar-default role="navigation"
     #menu.collapse.navbar-collapse
       ul.nav.navbar-nav
         li.active
-          a href="#"  Link
-        li
-          a href="#"  Link
+          = link_to entry_new_path
+            | New
       ul.nav.navbar-nav.navbar-right
         li
-          /TODO: about_path
           = link_to about_path
             | About
