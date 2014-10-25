@@ -8,7 +8,9 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def modal
+  def index
+  end
 
+  def new
   end
 end

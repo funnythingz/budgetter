@@ -6,13 +6,14 @@ nav.navbar.navbar-default role="navigation"
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand href="#"  Budgetter
+      = link_to root_path, :class => 'navbar-brand'
+        | #{Settings.info.app_name}
     #menu.collapse.navbar-collapse
       ul.nav.navbar-nav
-        li.active
+        li class="#{'active' if current_page?(controller: 'entry', action: 'new')}"
           = link_to entry_new_path
             | New
       ul.nav.navbar-nav.navbar-right
-        li
+        li class="#{'active' if current_page?(controller: 'about', action: 'view')}"
           = link_to about_path
             | About

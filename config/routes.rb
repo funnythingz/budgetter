@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # root
-  get '/', to: 'entry#index'
+  root to: 'entry#index'
 
   # entry
   get '/entry/new', to: 'entry#new'
