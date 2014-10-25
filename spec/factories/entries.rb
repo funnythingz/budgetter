@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :entry do
-    title "MyString"
-    budget ""
+    title "原付改造予算"
+    budget 10000
   end
 end

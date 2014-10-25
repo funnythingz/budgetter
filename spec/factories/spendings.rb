@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :spending do
-    name "MyString"
-    amount ""
+    name "マフラー"
+    amount 30000
   end
 end
