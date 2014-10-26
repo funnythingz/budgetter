@@ -2,8 +2,9 @@ require 'rails_helper'
 
 describe Entry do
 
+  let(:entry) { build(:entry) }
   it {
-    expect(create(:entry)).to eq be_valid
+    expect(entry).to be_valid
   }
 
 end
