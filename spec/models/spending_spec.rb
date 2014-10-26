@@ -1,5 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe Spending, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Spending do
+
+  let(:spending) { build(:spending) }
+  it {
+    expect(spending).to be_valid
+  }
+
 end
