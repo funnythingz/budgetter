@@ -10,10 +10,22 @@ nav.navbar.navbar-default role="navigation"
         | #{Settings.info.app_name}
     #menu.collapse.navbar-collapse
       ul.nav.navbar-nav
-        li class="#{'active' if current_page?(controller: 'entry', action: 'new')}"
-          = link_to entry_new_path
-            | New
-      ul.nav.navbar-nav.navbar-right
-        li class="#{'active' if current_page?(controller: 'about', action: 'view')}"
+        li
           = link_to about_path
             | About
+        - if user_signed_in?
+          li
+            = link_to entry_new_path
+              | New
+      ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+          li
+            = link_to destroy_user_session_path, :method => :delete
+              | Sign out
+        - else
+          li
+            = link_to new_user_registration_path
+              | Sign up
+          li
+            = link_to new_user_session_path
+              | Sign in

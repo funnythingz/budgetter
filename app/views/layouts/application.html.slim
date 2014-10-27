@@ -15,6 +15,12 @@ html
   body
 
     = render 'layouts/global_navigation'
+
     .container
+      p.notice
+        | #{notice}
+      p.alert
+        | #{alert}
+
       = yield
     = render 'layouts/footer'
